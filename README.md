@@ -1,3 +1,9 @@
-# LibreWeb
+# LibreWeb Research Lab
 
-LibreWeb Core App - Open-Source Decentralized Internet
+Researching based on experiments & facts:
+
+- Decentralized Web
+- Decentralized Browser
+- Decentralized Storage & Distribution
+- Decentralized Network
+- Alternatives for ISPs
