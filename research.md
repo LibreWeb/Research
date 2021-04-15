@@ -1,11 +1,13 @@
 # Research topics
 
-1. **[Goal #1](#p2pdecentralized-protocolnetwork):** We need a **P2P/decentralized** solution for transferring (markdown) files across the network, **without** a client-server topology. No single-point-of-failure. And no easy way to censorship your site or other sites.
-2. **[Goal #2](#gui-libraries):** We need to be able to draw text on the screen as fast and efficient as possible by using some existing **GUI Library**. Skipping the HTML parser step, meaning: `Markdown` -> `screen` instead of: `Markdown` -> `HTML` / `CSS` -> `screen`. Which should give us *full control* about the rendering and drawing sequences.
-   - *Conclusion:** GTK + Cairso & Pango
+1. **[Goal #1](#p2pdecentralized-protocol):** We need a **P2P/decentralized** solution for transferring (markdown) files across the network, **without** a client-server topology. No single-point-of-failure. And no easy way to censorship your site or other sites.
+   - *Conclusion:* [IPFS](https://ipfs.io/)
+2. **[Goal #3](#dns):** Despite IPFS, we need a (better) name service solution in a decentralized manner. IPNS is not good enough.
+   - *Conclusion:* Undecided
+3. **[Goal #2](#gui-libraries):** We need to be able to draw text on the screen as fast and efficient as possible by using some existing **GUI Library**. Skipping the HTML parser step, meaning: `Markdown` -> `screen` instead of: `Markdown` -> `HTML` / `CSS` -> `screen`. Which should give us *full control* about the rendering and drawing sequences.
+   - *Conclusion:* GTK + Gtk::TextView
 
-
-## P2P/Decentralized Protocol/Network
+## P2P/Decentralized Protocol
 
 See the list of P2P or decentralized protocols/network solutions below. Also known as Dapps.
 
@@ -94,6 +96,23 @@ Implements the LBRY Network protocols. LBRY blockchain is used for storing searc
 * Daemon with a JSON-RPC API to ease building end user applications in any language and for automating various tasks 
 
 Its written in Python. But as stated above, with a JSON-RPC API. However, much features like blockchain is not wanted.
+
+## DNS
+
+We need a decentralized domain name service (DNS), however _not_ centralized. Let's see what our alternatives are, or create our own solution.  
+The goal should be an easy humanreadable mutable name, which could point to IPFS content.
+
+### LBRY Claim
+In LBRY, a URL entry is called a claim. For simplicity, a claim can be considered to consist of:
+
+-  The name (a string of characters chosen by the creator)
+-  The number of credits
+-  Additional data related to the content and/or publisher identity
+
+See also [lbry FAQ](https://lbry.com/faq/naming).
+
+**Conclusion:** The idea is very well worked-out and a good solution actually. However, we do not want to use credits (or blockchain).  
+Still, would it be possible to use the same idea of 'a claim' without credits/tokens?
 
 ## GUI libraries
 
