@@ -102,6 +102,14 @@ Its written in Python. But as stated above, with a JSON-RPC API. However, much f
 We need a decentralized domain name service (DNS), however _not_ centralized. Let's see what our alternatives are, or create our own solution.  
 The goal should be an easy humanreadable mutable name, which could point to IPFS content.
 
+### IPNS
+
+[IPNS](https://docs.ipfs.io/concepts/ipns/) is the solution that IPFS gives us. IPNS has some big down sides. like it constantly needs to activily publish the 'domain name'. The name you get is still not human-friendly. And IPNS is slow.
+
+### Namecoin
+
+[Namecoin](https://www.namecoin.org/) is DNS on the blockchain.
+
 ### LBRY Claim
 In LBRY, a URL entry is called a claim. For simplicity, a claim can be considered to consist of:
 
